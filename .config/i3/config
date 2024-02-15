@@ -58,7 +58,6 @@ tiling_drag modifier titlebar
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -157,7 +156,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -192,10 +191,13 @@ bar {
         status_command i3status-rs
 }
 
+# Disable capslock
+exec --no-startup-id setxkbmap -option caps:none
 
 default_border pixel
+bindsym $mod+space exec --no-startup-id dmenu_run
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+e exec nemo 
 bindsym $mod+t exec gnome-terminal
-bindsym $mod+period exec emote
-bindsym $mod+l exec i3lock -c 111111 -b
+bindsym $mod+period exec --no-startup-id emote
+bindsym $mod+l exec --no-startup-id i3lock -c 333333 -b && systemctl suspend
