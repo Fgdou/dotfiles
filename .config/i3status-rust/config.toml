@@ -15,7 +15,7 @@ bat_charging = "|^| "
 [[block]]
 block = "net"
 interval = 10
-format = " $icon {$ssid$frequency|Wired} $ip {$signal_strength.bar(v:true)} "
+format = " $icon {$ssid.str(max_width:20, rot_interval:0.3, rot_separator:'        ')$frequency|Wired} $ip {$signal_strength.bar(v:true)} "
 inactive_format = ""
 
 [[block]]
@@ -40,7 +40,7 @@ format = " $icon $available.eng(w:2) "
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used "
+format = " $icon $mem_used.eng(p:M, force_prefix:true, prefix_space:true) "
 
 [[block]]
 block = "sound"
@@ -55,6 +55,8 @@ action = "toggle_mute"
 
 [[block]]
 block = "uptime"
+interval = 1
+format = " $icon $text.str(w:10) "
 
 [[block]]
 block = "time"
