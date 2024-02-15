@@ -15,7 +15,7 @@ bat_charging = "|^| "
 [[block]]
 block = "net"
 interval = 10
-format = " $icon {$ssid.str(max_width:20, rot_interval:0.3, rot_separator:'        ')$frequency|Wired} $ip {$signal_strength.bar(v:true)} "
+format = " $icon {$ssid.str(max_width:20, rot_interval:0.3, rot_separator:'        ')$frequency|Wired} $ip {$signal_strength.bar(v:true)|} "
 inactive_format = ""
 
 [[block]]
@@ -57,6 +57,13 @@ action = "toggle_mute"
 block = "uptime"
 interval = 1
 format = " $icon $text.str(w:7) "
+
+[[block]]
+block = "battery"
+format = " $percentage {$time $power |}"
+missing_format = ""
+device = "DisplayDevice"
+driver = "upower"
 
 [[block]]
 block = "time"
