@@ -29,3 +29,4 @@ stow .
 - nemo
 - emote
 - ttf-font-awesome
+- deepin
