@@ -17,3 +17,15 @@ cd dotfiles
 ```sh
 stow .
 ```
+
+# Packages
+- sddm
+- i3-wm
+- i3status-rust
+- i3lock
+- dmenu
+- feh
+- gnome-terminal
+- nemo
+- emote
+- ttf-font-awesome
