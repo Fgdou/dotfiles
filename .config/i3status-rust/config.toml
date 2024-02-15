@@ -1,0 +1,61 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "plain"
+[theme.overrides]
+idle_fg = "#ffffff"
+
+[icons]
+icons = "awesome6"
+[icons.overrides]
+bat = ["|E|", "|_|", "|=|", "|F|"]
+bat_charging = "|^| "
+
+
+[[block]]
+block = "net"
+interval = 10
+format = " $icon {$signal_strength $ssid$frequency|Wired} $ip "
+inactive_format = ""
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "temperature"
+format = " $icon $average "
+chip = "*-isa-*"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon $available.eng(w:2) "
+
+[[block]]
+block = "memory"
+format = " $icon $mem_total_used "
+
+[[block]]
+block = "sound"
+max_vol	= 100
+show_volume_when_muted = true
+[[block.click]]
+button = "middle"
+cmd = "pavucontrol"
+[[block.click]]
+button = "left"
+action = "toggle_mute"
+
+[[block]]
+block = "uptime"
+
+[[block]]
+block = "time"
+interval = 1
+format = " $timestamp.datetime(f:'%Y-%m-%d %H:%M:%S') "

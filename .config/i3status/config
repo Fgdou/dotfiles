@@ -11,6 +11,7 @@ general {
         interval = 1
 }
 
+order += "read_file uptime"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
@@ -21,29 +22,30 @@ order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "Wifi: %essid %quality %ip"
+        format_up = "📶 %essid %quality %ip"
         format_down = "No wifi"
 }
 
 ethernet _first_ {
-        format_up = "Ethernet: %ip (%speed)"
+        format_up = "🔌 %ip (%speed)"
         format_down = ""
 }
 
 battery all {
-        format = "Battery: %status %percentage %remaining"
+        format = "🔋 %status %remaining (%emptytime %consumption)"
+        format_down = ""
 }
 
 disk "/" {
-        format = "Disk: %avail"
+        format = "💾 %avail"
 }
 
 cpu_usage {
-        format = "CPU: %usage"
+        format = "🧮 %usage"
 }
 
 memory {
-        format = "RAM: %used"
+        format = "📈 %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -53,7 +55,11 @@ tztime local {
 }
 
 volume master {
-        format = "Volume: %volume"
-        format_muted = "Muted (%volume)"
+        format = "🔊 %volume"
+        format_muted = "🔇 %volume"
         device = "pulse"
+}
+
+read_file uptime {
+        path = "/proc/uptime"
 }
