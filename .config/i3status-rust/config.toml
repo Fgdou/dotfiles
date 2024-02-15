@@ -38,12 +38,6 @@ format = " $icon $available.eng(prefix_space:true) "
 block = "memory"
 format = " $icon $mem_used.eng(p:M, force_prefix:true, prefix_space:true) "
 
-
-[[block]]
-block = "uptime"
-interval = 1
-format = " $icon $text.str(w:7) "
-
 [[block]]
 block = "sound"
 max_vol	= 100
@@ -54,6 +48,10 @@ cmd = "pavucontrol"
 [[block.click]]
 button = "left"
 action = "toggle_mute"
+
+[[block]]
+block = "backlight"
+missing_format = ""
 
 [[block]]
 block = "battery"
