@@ -206,3 +206,4 @@ bindsym $mod+t exec gnome-terminal
 bindsym $mod+period exec --no-startup-id emote
 bindsym $mod+l exec --no-startup-id i3lock -c 000033 -b && systemctl suspend
 bindsym Print exec deepin-screen-recorder
+bindsym $mod+p exec --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
