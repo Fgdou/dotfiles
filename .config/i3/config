@@ -193,10 +193,10 @@ bar {
         status_command i3status-rs
 }
 
-# Disable capslock
-exec --no-startup-id setxkbmap -option caps:none
 # Keyboard layout
 exec --no-startup-id setxkbmap -layout us -variant alt-intl
+# Disable capslock
+exec --no-startup-id setxkbmap -option caps:none
 
 default_border pixel
 bindsym $mod+space exec --no-startup-id dmenu_run
