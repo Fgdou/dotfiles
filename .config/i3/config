@@ -23,6 +23,10 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id feh --bg-fill '/home/fgdou/Pictures/Wolf galaxy1470_square.jpg'
 
+# Keyboard layout
+exec --no-startup-id setxkbmap -layout us -variant alt-intl
+# Disable capslock
+exec --no-startup-id setxkbmap -option caps:none
 
 exec --no-startup-id dex --autostart --environment i3
 
@@ -192,11 +196,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status-rs
 }
-
-# Keyboard layout
-exec --no-startup-id setxkbmap -layout us -variant alt-intl
-# Disable capslock
-exec --no-startup-id setxkbmap -option caps:none
 
 default_border pixel
 bindsym $mod+space exec --no-startup-id dmenu_run
