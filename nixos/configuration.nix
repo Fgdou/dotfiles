@@ -67,6 +67,7 @@ in {
     vscode
     git
     alejandra
+    gnumake
   ];
 
   # Enable the OpenSSH daemon.
