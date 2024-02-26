@@ -1,0 +1,11 @@
+{
+  "SKIP_HOST_UPDATE": true,
+  "IS_MAXIMIZED": false,
+  "IS_MINIMIZED": false,
+  "WINDOW_BOUNDS": {
+    "x": 200,
+    "y": 182,
+    "width": 1280,
+    "height": 720
+  }
+}
