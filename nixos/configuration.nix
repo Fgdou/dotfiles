@@ -1,14 +1,22 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  alejandra =
+    (import (builtins.fetchTarball {
+      url = "https://github.com/kamadorueda/alejandra/tarball/3.0.0";
+    }) {})
+    .outPath;
+in {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   nixpkgs.config.allowUnfree = true;
@@ -42,7 +50,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.fgdou = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "sudo" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "sudo" "docker"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
       stow
@@ -58,6 +66,7 @@
     google-chrome
     vscode
     git
+    alejandra
   ];
 
   # Enable the OpenSSH daemon.
@@ -65,4 +74,3 @@
 
   system.stateVersion = "23.11"; # Did you read the comment?
 }
-
