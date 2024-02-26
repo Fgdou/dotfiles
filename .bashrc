@@ -14,4 +14,4 @@ alias dc='docker compose -f'
 alias kubectl='microk8s kubectl'
 
 export PATH="${PATH}:/home/fgdou/.cargo/bin"
-
+export NIX_REMOTE=deamon
