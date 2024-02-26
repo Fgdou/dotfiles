@@ -62,7 +62,7 @@ color-scheme='prefer-dark'
     layout = "us";
     xkbVariant = "intl";
     displayManager.lightdm.greeters.slick.extraConfig = ''
-    background=/home/fgdou/dotfiles/assets/Wolf.jpg
+    background=/etc/lightdm/background.jpg
     '';
   };
   services.cinnamon.apps.enable = true;
