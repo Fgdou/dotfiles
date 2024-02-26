@@ -30,6 +30,8 @@ in {
   services.xserver = {
     enable = true;
     desktopManager.cinnamon.enable = true;
+    layout = "us";
+    xkbVariant = "intl";
   };
   services.cinnamon.apps.enable = true;
 
