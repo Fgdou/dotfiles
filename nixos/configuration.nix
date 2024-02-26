@@ -105,6 +105,8 @@ color-scheme='prefer-dark'
     alejandra
     gnumake
     bat
+    libgtop
+    gnomeExtensions.system-monitor
   ];
 
   virtualisation.docker.enable = true;
