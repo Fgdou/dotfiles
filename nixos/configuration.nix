@@ -20,6 +20,18 @@ in {
 
   boot.loader.systemd-boot.enable = true;
   nixpkgs.config.allowUnfree = true;
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+  };
+  hardware.bluetooth.settings = {
+    General = {
+      Enable = "Source,Sink,Media,Socket";
+      Experimental = true;
+    };
+  };
 
   time.timeZone = "Europe/Paris";
 
@@ -76,7 +88,6 @@ color-scheme='prefer-dark'
 
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
@@ -107,6 +118,8 @@ color-scheme='prefer-dark'
     bat
     libgtop
     gnomeExtensions.system-monitor
+    rnix-lsp
+    direnv
   ];
 
   virtualisation.docker.enable = true;
