@@ -1,0 +1,9 @@
+[safe]
+    directory = /etc/nixos
+[user]
+    email = fabigoardou@gmail.com
+    name = Fgdou
+[core]
+    editor = vim
+[init]
+    defaultBranch = main
