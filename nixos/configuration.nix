@@ -104,6 +104,7 @@ color-scheme='prefer-dark'
     git
     alejandra
     gnumake
+    bat
   ];
 
   virtualisation.docker.enable = true;
