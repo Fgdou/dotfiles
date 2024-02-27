@@ -15,7 +15,7 @@ cd dotfiles
 
 # Apply
 ```sh
-stow .
+make
 ```
 
 # Packages
