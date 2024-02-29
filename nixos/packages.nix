@@ -16,6 +16,7 @@
     gnomeExtensions.system-monitor
     rnix-lsp
     direnv
+    virt-manager
   ];
 
   users.users.fgdou.packages = with pkgs; [
