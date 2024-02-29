@@ -41,6 +41,9 @@
         "org/gnome/libgnomekbd/keyboard".options= [
           "caps\tcaps:none"
         ];
+        "org/virt-manager/virt-manager/connections".uris = [
+          "qemu+ssh://fgdou@nas/system"
+        ];
       };
     };
   };
