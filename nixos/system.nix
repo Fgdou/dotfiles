@@ -3,7 +3,15 @@
   lib,
   pkgs,
   ...
-}:{
+}:
+
+let
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+in{
+  imports = [
+    (import "${home-manager}/nixos")
+  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 1;
