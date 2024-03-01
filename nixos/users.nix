@@ -44,6 +44,8 @@
         "org/virt-manager/virt-manager/connections".uris = [
           "qemu+ssh://fgdou@nas/system"
         ];
+        "org.gnome.desktop.a11y.applications".screen-keyboard-enabled = "false";
+        "apps.onboard".xembed-onboard = "false";
       };
     };
   };
