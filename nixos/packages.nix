@@ -17,6 +17,12 @@
     rnix-lsp
     direnv
     virt-manager
+    python3
+    cargo
+    rustc
+    nodejs_21
+    jdk
+    maven
   ];
 
   users.users.fgdou.packages = with pkgs; [
