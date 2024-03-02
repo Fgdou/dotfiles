@@ -21,4 +21,9 @@ in{
   i18n.defaultLocale = "en_US.UTF-8";
 
   system.stateVersion = "23.11"; # Did you read the comment?
+
+  # Lofee flow fn keys
+  boot.extraModprobeConfig = ''
+    options hid_apple fnmode=2
+  '';
 }
