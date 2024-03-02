@@ -22,6 +22,7 @@
     rustc
     nodejs_21
     jdk
+    jdk17
     maven
   ];
 
@@ -30,6 +31,8 @@
     stow
     discord
     spotify
+    prismlauncher
+    teamviewer
   ];
 
   virtualisation.docker.enable = true;
