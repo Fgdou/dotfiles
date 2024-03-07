@@ -24,6 +24,7 @@
     jdk
     jdk17
     maven
+    nmap
   ];
 
   users.users.fgdou.packages = with pkgs; [
