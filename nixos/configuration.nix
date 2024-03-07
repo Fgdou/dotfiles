@@ -19,6 +19,10 @@
 
   networking.extraHosts = 
     ''
-      192.168.1.173 fgdou.ovh dash.fgdou.ovh vaultwarden.fgdou.ovh
+      192.168.1.173 fgdou.ovh 
+      192.168.1.173 dash.fgdou.ovh 
+      192.168.1.173 vaultwarden.fgdou.ovh 
+      192.168.1.173 ihatemoney.fgdou.ovh
+      192.168.1.173 nginx.fgdou.ovh
     '';
 }
