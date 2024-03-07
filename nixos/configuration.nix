@@ -16,4 +16,9 @@
     ./system.nix
     ./users.nix
   ];
+
+  networking.extraHosts = 
+    ''
+      192.168.1.173 fgdou.ovh dash.fgdou.ovh vaultwarden.fgdou.ovh
+    '';
 }
