@@ -16,4 +16,8 @@
     ./system.nix
     ./users.nix
   ];
+  nixpkgs.config.permittedInsecurePackages = [
+                "nix-2.15.3"
+              ];
+
 }
