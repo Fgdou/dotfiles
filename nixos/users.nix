@@ -17,6 +17,18 @@
       enable = true;
       settings = {
         "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+        "org/cinnamon/desktop/keybindings/media-keys" = {
+          area-screenshot-clip = ["print"];
+          screenshot= [];
+        };
+        "org/cinnamon/desktop/interface" = {
+          cursor-blink-time = 1200;
+          cursor-size = 24;
+          cursor-theme = "Adwaita";
+          gtk-theme = "Mint-L-Dark";
+          icon-theme = "Mint-Y-Aqua";
+          toolkit-accessibility="false";
+        };
         "org/cinnamon/desktop/background".picture-uri = "file:///home/fgdou/dotfiles/assets/Wolf.jpg";
         "org/cinnamon" = {
           desktop-effects-workspace = "false";
