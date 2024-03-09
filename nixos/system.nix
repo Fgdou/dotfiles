@@ -26,4 +26,6 @@ in{
   boot.extraModprobeConfig = ''
     options hid_apple fnmode=2
   '';
+  networking.networkmanager.enable = true;
+  systemd.services.NetworkManager-wait-online.enable = false;
 }
