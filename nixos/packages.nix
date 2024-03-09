@@ -35,6 +35,7 @@
     spotify
     prismlauncher
     teamviewer
+    libreoffice-qt
   ];
 
   virtualisation.docker.enable = true;
