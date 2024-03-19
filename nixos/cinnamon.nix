@@ -22,9 +22,21 @@
       enable = true;
       settings = {
         "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+        "org/cinnamon/desktop/keybindings" = {
+          looking-glass-keybinding = [];
+        };
         "org/cinnamon/desktop/keybindings/media-keys" = {
           area-screenshot-clip = ["print"];
+          screensaver=[
+            "<Super>l" 
+            "XF86ScreenSaver"
+          ];
           screenshot= [];
+        };
+        "org/cinnamon/desktop/keybindings/custom-keybindings/custom0" = {
+          binding=["<Primary><Shift>Escape"];
+          command="gnome-system-monitor";
+          name="monitor";
         };
         "org/cinnamon/desktop/interface" = {
           cursor-blink-time = 1200;
