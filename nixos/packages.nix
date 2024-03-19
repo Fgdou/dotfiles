@@ -28,7 +28,6 @@
     gcc
     cmake
     htop
-    gtop
   ];
 
   users.users.fgdou.packages = with pkgs; [
