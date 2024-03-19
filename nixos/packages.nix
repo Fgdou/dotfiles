@@ -27,6 +27,7 @@
     dig
     gcc
     cmake
+    htop
   ];
 
   users.users.fgdou.packages = with pkgs; [
