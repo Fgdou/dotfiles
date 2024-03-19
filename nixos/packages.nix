@@ -27,6 +27,7 @@
     nmap
     dig
     gcc
+    cmake
   ];
 
   users.users.fgdou.packages = with pkgs; [
