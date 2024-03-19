@@ -15,4 +15,5 @@
   };
   services.cinnamon.apps.enable = true;
   services.xserver.libinput.enable = true;
+  i18n.inputMethod.enabled = "ibus";
 }
