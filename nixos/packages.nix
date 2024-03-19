@@ -18,8 +18,7 @@
     direnv
     virt-manager
     python3
-    cargo
-    rustc
+    rustup
     nodejs_21
     jdk
     jdk17
