@@ -28,6 +28,7 @@
     gcc
     cmake
     htop
+    gnome.gnome-system-monitor
   ];
 
   users.users.fgdou.packages = with pkgs; [
