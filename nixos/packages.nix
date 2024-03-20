@@ -39,6 +39,7 @@
     prismlauncher
     teamviewer
     libreoffice-qt
+    steam
   ];
 
   virtualisation.docker.enable = true;
