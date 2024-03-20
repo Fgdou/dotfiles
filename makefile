@@ -1,7 +1,7 @@
 all:
-	mkdir ~/.config
+	mkdir -p ~/.config
 	touch ~/.config/dummy
-	mkdir ~/.ssh
+	mkdir -p ~/.ssh
 	touch ~/.config/dummy
 	stow stow/
 	sudo cp assets/Wolf.jpg /etc/lightdm/background.jpg
