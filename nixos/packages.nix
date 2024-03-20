@@ -44,4 +44,5 @@
   virtualisation.docker.enable = true;
   services.openssh.enable = true;
   services.printing.enable = true;
+  nixpkgs.config.allowUnfree = true;
 }
