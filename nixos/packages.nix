@@ -46,4 +46,6 @@
   services.openssh.enable = true;
   services.printing.enable = true;
   nixpkgs.config.allowUnfree = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
 }
