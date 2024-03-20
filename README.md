@@ -2,9 +2,9 @@
 
 Using GNU stow to handle all dotfiles in my linux configurations.
 
-# Install stow
+# Enter shell
 ```shell
-sudo pacman -Sy stow
+nix-shell -p git vim stow gnumake
 ```
 
 # Clone
@@ -12,6 +12,9 @@ sudo pacman -Sy stow
 git clone https://github.com/Fgdou/dotfiles
 cd dotfiles
 ```
+
+# Edit hardware conf
+Edit the `nixos/hardware-configuration.example`
 
 # Apply
 ```sh
