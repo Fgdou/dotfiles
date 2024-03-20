@@ -39,8 +39,9 @@
     prismlauncher
     teamviewer
     libreoffice-qt
-    steam
   ];
+
+  programs.steam.enable = true;
 
   virtualisation.docker.enable = true;
   services.openssh.enable = true;
