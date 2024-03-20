@@ -4,5 +4,7 @@ all:
 	mkdir -p ~/.ssh
 	touch ~/.config/dummy
 	stow stow/
+	sudo mkdir -p /etc/lightdm
 	sudo cp assets/Wolf.jpg /etc/lightdm/background.jpg
+	sudo rm -Rf /etc/nixos
 	sudo ln -sf $(shell pwd)/nixos/ /etc/
