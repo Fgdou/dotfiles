@@ -26,6 +26,10 @@
     device = "/dev/disk/by-uuid/3573-169F";
     fsType = "vfat";
   };
+  fileSystems."/media/hdd" = {
+    device = "/dev/disk/by-uuid/841f763e-3137-443f-b533-85bace228919";
+    fsType = "ext4";
+  };
 
   swapDevices = [
     {device = "/dev/disk/by-uuid/736d4330-45ac-4e57-adf0-1413549d1d19";}
