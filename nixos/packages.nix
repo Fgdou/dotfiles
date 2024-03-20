@@ -39,6 +39,7 @@
     prismlauncher
     teamviewer
     libreoffice-qt
+    parsec-bin
   ];
 
   programs.steam.enable = true;
