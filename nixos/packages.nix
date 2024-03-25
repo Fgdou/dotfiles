@@ -39,6 +39,9 @@
     prismlauncher
     libreoffice-qt
     parsec-bin
+    vlc
+    obs-studio
+    kdenlive
   ];
 
   programs.steam.enable = true;
