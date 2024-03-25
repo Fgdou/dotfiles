@@ -37,12 +37,12 @@
     discord
     spotify
     prismlauncher
-    teamviewer
     libreoffice-qt
     parsec-bin
   ];
 
   programs.steam.enable = true;
+  services.teamviewer.enable = true;
 
   virtualisation.docker.enable = true;
   services.openssh.enable = true;
