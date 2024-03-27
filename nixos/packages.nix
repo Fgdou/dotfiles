@@ -29,6 +29,8 @@
     cmake
     htop
     gnome.gnome-system-monitor
+    lutris
+    wine
   ];
 
   users.users.fgdou.packages = with pkgs; [
